@@ -12,6 +12,8 @@ class Solution {
                 ons++;
                 curr--;
             }
+
+            
             if (curr > score) {
                 score = curr;
             }
