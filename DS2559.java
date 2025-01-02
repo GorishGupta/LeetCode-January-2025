@@ -1,5 +1,5 @@
-class Solution {
-
+import java.util.*;
+class DS2559 {
     public int[] vowelStrings(String[] words, int[][] queries) {
         int[] ans = new int[queries.length];
         HashSet<Character> vowels = new HashSet<>(
@@ -24,7 +24,6 @@ class Solution {
                 prefixSum[currentQuery[1]] -
                 (currentQuery[0] == 0 ? 0 : prefixSum[currentQuery[0] - 1]);
         }
-
         return ans;
     }
 }
