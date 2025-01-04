@@ -15,6 +15,7 @@ public class DS1930 {
                 }
                 appear[i] = true;
             }
+            
             int ans = 0;
             for (int x : hs) {
                 ans += Integer.bitCount(x);
