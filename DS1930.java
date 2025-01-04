@@ -1,8 +1,10 @@
 public class DS1930 {
         public int countPalindromicSubsequence(String s) {
+
             int[] hs = new int[26];
             int[] after = new int[26];
             boolean[] appear = new boolean[26];
+
             for (char c : s.toCharArray()) {
                 int i = c - 'a';
                 if (appear[i]) {
@@ -14,12 +16,16 @@ public class DS1930 {
                     }
                 }
                 appear[i] = true;
-            }
+            }    
             int ans = 0;
             for (int x : hs) {
                 ans += Integer.bitCount(x);
             }
             return ans;
+        }
+        public static void main(String[] args) {
+            DS1930 obj = new DS1930();
+            System.out.println(obj.countPalindromicSubsequence("aabca"));
         }
         
 }
