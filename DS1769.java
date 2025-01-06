@@ -2,10 +2,8 @@ class Solution {
     public int[] minOperations(String boxes) {
         int n = boxes.length();
         int[] distances = new int[n];
-
         int prefixCount = 0;
         int prefixSum = 0;
-
         for (int i = 0; i < n; ++i) {
             distances[i] = prefixCount * i - prefixSum;
             if (boxes.charAt(i) == '1') {
@@ -13,7 +11,6 @@ class Solution {
                 prefixSum += i;
             }
         }
-
         int suffixCount = 0;
         int suffixSum = 0;
 
@@ -24,7 +21,6 @@ class Solution {
                 suffixSum += i;
             }
         }
-
         return distances;
     }
 }
