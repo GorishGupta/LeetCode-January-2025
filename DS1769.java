@@ -1,35 +1,30 @@
-public class DS1769 {
-        public int[] minOperations(String boxes) {
-            char ch[]=boxes.toCharArray();
-            int i;
-            int n=boxes.length();
-            int right=0;
-            int left=0;
-            int ans=0;
-            for(i=0;i<n;i++){
-                if(ch[i]=='1'){
-                    ans+=i;
-                right++;
-                }
-                
+class Solution {
+    public int[] minOperations(String boxes) {
+        int n = boxes.length();
+        int[] distances = new int[n];
+
+        int prefixCount = 0;
+        int prefixSum = 0;
+
+        for (int i = 0; i < n; ++i) {
+            distances[i] = prefixCount * i - prefixSum;
+            if (boxes.charAt(i) == '1') {
+                ++prefixCount;
+                prefixSum += i;
             }
-            int res[]=new int[n];
-            res[0]=ans;
-            if(ch[0]=='1'){
-                left++;
-                right--;
+        }
+
+        int suffixCount = 0;
+        int suffixSum = 0;
+
+        for (int i = n - 1; i >= 0; --i) {
+            distances[i] += suffixSum - suffixCount * i;
+            if (boxes.charAt(i) == '1') {
+                ++suffixCount;
+                suffixSum += i;
             }
-            for(i=1;i<n;i++){
-                //System.out.println(ans+" "+left+" "+right);
-                ans=ans-right;
-                ans=ans+left;
-                if(ch[i]=='1'){
-                    right--;
-                    left++; 
-                }
-                res[i]=ans;
-            }
-            return res;
-        
+        }
+
+        return distances;
     }
 }
