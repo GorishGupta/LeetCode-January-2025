@@ -11,8 +11,13 @@ class Solution {
         }
         return res;
     }
-
+    
     boolean isPrefixAndSuffix(String s1, String s2) {
         return s2.startsWith(s1) && s2.endsWith(s1);
+    }
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String[] words = {"a", "b", "ab", "c", "abc"};
+        System.out.println(sol.countPrefixSuffixPairs(words));
     }
 }
