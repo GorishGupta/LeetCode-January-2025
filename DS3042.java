@@ -1,3 +1,4 @@
+import java.util.*;
 public class DS3042{
     class Solution {
         public int countPrefixSuffixPairs(String[] words) {
@@ -17,6 +18,7 @@ public class DS3042{
             return s2.startsWith(s1) && s2.endsWith(s1);
         }
         public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
             DS3042 d = new DS3042();
             DS3042.Solution s = d.new Solution();
             String[] words = {"a", "b", "a", "c", "b", "a"};
