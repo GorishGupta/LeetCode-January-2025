@@ -10,7 +10,7 @@ public class DS3042{
                     }
                 }
             }
-            return res;
+        return res;
         }
         
         boolean isPrefixAndSuffix(String s1, String s2) {
@@ -23,6 +23,7 @@ public class DS3042{
             String[] words = {"a", "b", "a", "c", "b", "a"};
             System.out.println(s.countPrefixSuffixPairs(words));
             sc.close();
+
         }
     }
 }
