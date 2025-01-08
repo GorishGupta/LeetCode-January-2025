@@ -17,9 +17,10 @@ public class DS3042{
             return s2.startsWith(s1) && s2.endsWith(s1);
         }
         public static void main(String[] args) {
-            Solution sol = new Solution();
-            String[] words = {"a", "b", "ab", "c", "abc"};
-            System.out.println(sol.countPrefixSuffixPairs(words));
+            DS3042 d = new DS3042();
+            DS3042.Solution s = d.new Solution();
+            String[] words = {"a", "b", "a", "c", "b", "a"};
+            System.out.println(s.countPrefixSuffixPairs(words));
         }
     }
 }
