@@ -1,3 +1,4 @@
+
 class Solution {
     public int[] minOperations(String boxes) {
         int n = boxes.length();
