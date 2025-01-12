@@ -19,7 +19,7 @@ public class DS2116 {
             }
             
             balance = 0;
-            // Right to left pass
+
             for (int i = n - 1; i >= 0; i--) {
                 if (s.charAt(i) == ')' || locked.charAt(i) == '0') {
                     balance++;
