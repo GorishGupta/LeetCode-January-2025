@@ -8,7 +8,6 @@ public class DS2116 {
             }
             
             int balance = 0;
-            // Left to right pass
             for (int i = 0; i < n; i++) {
                 if (s.charAt(i) == '(' || locked.charAt(i) == '0') {
                     balance++;
