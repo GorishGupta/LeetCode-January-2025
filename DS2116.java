@@ -2,7 +2,6 @@ public class DS2116 {
     class Solution {
         public boolean canBeValid(String s, String locked) {
             int n = s.length();
-            
             if (n % 2 != 0) {
                 return false;
             }
