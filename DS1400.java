@@ -16,4 +16,10 @@ public class DS1400 {
             return oddCount <= k;
         }
     }
+    public static void main(String[] args) {
+        int k = 3;
+        String s = "annabelle";
+        Solution sol = new DS1400().new Solution();
+        System.out.println(sol.canConstruct(s, k));
+    }
 }
