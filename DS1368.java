@@ -40,4 +40,10 @@ public class DS1368 {
         }
     }
 }
+public static void main(String[] args) {
+    DS1368 d = new DS1368();
+    DS1368.Solution s = d.new Solution();
+    int[][] grid = {{1,1,1,1},{2,2,2,2},{1,1,1,1},{2,2,2,2}};
+    System.out.println(s.minCost(grid));
+}
 }
