@@ -71,6 +71,7 @@ public class DS407 {
             return Integer.compare(this.height, other.height);
         }
     }
+    
     private boolean isValidCell(
         int row,
         int col,
