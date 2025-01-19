@@ -68,7 +68,6 @@ public class DS407 {
         }
         @Override
         public int compareTo(Cell other) {
-            // Min-heap comparison
             return Integer.compare(this.height, other.height);
         }
     }
@@ -80,5 +79,16 @@ public class DS407 {
     ) {
         return row >= 0 && col >= 0 && row < numOfRows && col < numOfCols;
     }
+}
+public static void main(String[] args) {
+    DS407 d = new DS407();
+    DS407.Solution s = d.new Solution();
+    int[][] heightMap = {
+        { 1, 4, 3, 1, 3, 2 },
+        { 3, 2, 1, 3, 2, 4 },
+        { 2, 3, 3, 2, 3, 1 }
+    };
+    System.out.println(s.trapRainWater(heightMap));
+    System.out.println();
 }
 }
