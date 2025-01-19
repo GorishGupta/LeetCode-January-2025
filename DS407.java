@@ -1,6 +1,6 @@
 import java.util.PriorityQueue;
 public class DS407 {
-    
+
     class Solution {
     public int trapRainWater(int[][] heightMap) {
         int[] dRow = { 0, 0, -1, 1 };
@@ -67,6 +67,7 @@ public class DS407 {
             this.row = row;
             this.col = col;
         }
+        
         @Override
         public int compareTo(Cell other) {
             return Integer.compare(this.height, other.height);
