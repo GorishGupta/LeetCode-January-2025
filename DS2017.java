@@ -22,4 +22,14 @@ public class DS2017 {
             return minimumSum;
         }
     }
+    public static void main(String[] args) {
+        
+        DS2017 d = new DS2017();
+        DS2017.Solution s = d.new Solution();
+        int[][] grid = {
+            {2, 5, 4},
+            {1, 5, 1}
+        };
+        System.out.println(s.gridGame(grid));
+    }
 }
