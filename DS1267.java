@@ -26,6 +26,24 @@ public class DS1267 {
         }
     }
     public static void main(String[] args) {
-        
+        DS1267 d = new DS1267();
+        DS1267.Solution s = d.new Solution();
+        int[][] grid = {
+            {1, 0},
+            {0, 1}
+        };
+        System.out.println(s.countServers(grid)); // 0
+        grid = new int[][] {
+            {1, 0},
+            {1, 1}
+        };
+        System.out.println(s.countServers(grid)); // 3
+        grid = new int[][] {
+            {1, 1, 0, 0},
+            {0, 0, 1, 0},
+            {0, 0, 1, 0},
+            {0, 0, 0, 1}
+        };
+        System.out.println(s.countServers(grid)); // 4
     }
 }
