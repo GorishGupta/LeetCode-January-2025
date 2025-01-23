@@ -25,4 +25,7 @@ public class DS1267 {
             return count;
         }
     }
+    public static void main(String[] args) {
+        
+    }
 }
