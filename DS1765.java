@@ -1,3 +1,4 @@
+import java.util.*;
 public class DS1765 {
     public class Solution {
 
